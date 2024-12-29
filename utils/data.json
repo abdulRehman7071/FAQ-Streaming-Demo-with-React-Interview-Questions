@@ -1,0 +1,166 @@
+[
+  {
+    "question": "What is React?",
+    "answer": "React is a popular JavaScript library for building user interfaces, particularly single-page applications. It allows developers to create large web applications that can update and render efficiently in response to data changes."
+  },
+  {
+    "question": "What are the advantages of using React?",
+    "answer": "The advantages of using React include improved performance through the virtual DOM, reusable components, unidirectional data flow, declarative syntax, strong community support, and the ability to build complex user interfaces with ease."
+  },
+  {
+    "question": "What are the limitations of React?",
+    "answer": "The limitations of React include its steep learning curve, the need for additional libraries for state management and routing, the complexity of managing large applications, and the lack of built-in support for some features like internationalization and accessibility."
+  },
+  {
+    "question": "What is useState() in React?",
+    "answer": "The `useState` hook in React is used to add state to functional components. It returns a state variable and a function to update it. For example: `const [count, setCount] = useState(0);` allows you to manage the state of `count` and update it using `setCount`."
+  },
+  {
+    "question": "What are keys in React?",
+    "answer": "Keys in React are special attributes used to give an identity to elements in a list. They help React identify which items have changed, are added, or are removed, optimizing the rendering of dynamic lists. Keys should be unique and stable."
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JSX stands for JavaScript XML. It allows you to write HTML-like code within JavaScript. JSX makes it easier to create React elements and is transformed into React.createElement calls by tools like Babel."
+  },
+  {
+    "question": "What are the differences between functional and class components?",
+    "answer": "Functional components are simple functions that return JSX and are stateless by default. Class components are ES6 classes that extend from React.Component, can have state and lifecycle methods, and are more verbose. With hooks, functional components can now also manage state and side effects."
+  },
+  {
+    "question": "What is the virtual DOM? How does react use the virtual DOM to render the UI?",
+    "answer": "The virtual DOM is a lightweight in-memory representation of the real DOM. React uses the virtual DOM to optimize rendering by minimizing direct manipulations of the browser's DOM. When the state of an object changes, React updates the virtual DOM first, then calculates the most efficient way to update the real DOM."
+  },
+  {
+    "question": "What are the differences between controlled and uncontrolled components?",
+    "answer": "Controlled components are those where the form data is handled by the React component's state. Uncontrolled components are those where the form data is handled by the DOM itself. Controlled components are preferred in React because they allow for more predictable behavior and easier testing."
+  },
+  {
+    "question": "What are props in React?",
+    "answer": "Props (short for properties) are used to pass data from a parent component to a child component in React. They are read-only and cannot be modified by the child component."
+  },
+  {
+    "question": "Explain React state and props.",
+    "answer": "React state is used to manage data that can change over time within a component. It is mutable and can be updated using the `setState` function or the `useState` hook. Props are used to pass data from a parent component to a child component and are read-only."
+  },
+  {
+    "question": "Explain about types of side effects in React component.",
+    "answer": "Side effects in React components include data fetching, subscriptions, manually changing the DOM, and timers. These side effects can be managed using the `useEffect` hook in functional components or lifecycle methods in class components."
+  },
+  {
+    "question": "What is prop drilling in React?",
+    "answer": "Prop drilling in React refers to the process of passing props down through multiple levels of components to reach a deeply nested component. This can make the code harder to maintain and understand. Context API or state management libraries can be used to avoid prop drilling."
+  },
+  {
+    "question": "What are error boundaries?",
+    "answer": "Error boundaries in React are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. They are used to prevent the entire application from crashing due to an error in a single component."
+  },
+  {
+    "question": "What is React Hooks?",
+    "answer": "React Hooks are functions that allow you to use state and other React features in functional components. They were introduced in React 16.8 to enable developers to use state and lifecycle methods without writing class components."
+  },
+  {
+    "question": "Explain React Hooks.",
+    "answer": "React Hooks provide a way to use state and side effects in functional components. Some commonly used hooks include `useState` for managing state, `useEffect` for side effects, `useContext` for consuming context, and `useReducer` for complex state logic."
+  },
+  {
+    "question": "What are the rules that must be followed while using React Hooks?",
+    "answer": "The rules for using React Hooks include: only calling hooks at the top level of a functional component, not inside loops, conditions, or nested functions, and only calling hooks from React functional components or custom hooks."
+  },
+  {
+    "question": "What is the use of useEffect React Hooks?",
+    "answer": "The `useEffect` hook in React is used to perform side effects in functional components. It allows you to perform actions like data fetching, subscriptions, or manually changing the DOM after a component renders. `useEffect` takes a function that contains the side effect code and an optional array of dependencies."
+  },
+  {
+    "question": "Why do React Hooks make use of refs?",
+    "answer": "React Hooks make use of refs to persist values across renders without causing re-renders. The `useRef` hook is used to create a mutable object that persists for the lifetime of the component. Refs are commonly used to access DOM elements directly or to keep a mutable value that does not trigger a re-render when updated."
+  },
+  {
+    "question": "What are Custom Hooks?",
+    "answer": "Custom Hooks in React are reusable functions that encapsulate logic using one or more built-in hooks. They allow you to extract and share logic between components, making your code more modular and reusable. Custom hooks follow the same rules as built-in hooks and must start with the word 'use'."
+  },
+  {
+    "question": "How to perform automatic redirect after login?",
+    "answer": "To perform an automatic redirect after login in a React application, you can use the `useHistory` hook from React Router to programmatically navigate to a different route. After a successful login, you can call `history.push('/desired-route')` to redirect the user."
+  },
+  {
+    "question": "How to pass data between sibling components using React router?",
+    "answer": "To pass data between sibling components using React Router, you can use the `useLocation` hook to access the state passed through the `Link` component. In the sending component, use `<Link to={{ pathname: '/target-route', state: { data: 'yourData' } }}`. In the receiving component, use `const location = useLocation(); const data = location.state.data;` to retrieve the data."
+  },
+  {
+    "question": "How to re-render the view when the browser is resized?",
+    "answer": "To re-render the view when the browser is resized, you can use the `useEffect` hook to add an event listener for the `resize` event. Inside the `useEffect`, you can update the state or perform any necessary actions to trigger a re-render. Don't forget to clean up the event listener on component unmount."
+  },
+  {
+    "question": "How to create a switching component for displaying different pages?",
+    "answer": "To create a switching component for displaying different pages, you can use React Router's `Switch` and `Route` components. Define routes for each page and use the `Switch` component to render the first matching route. For example: `<Switch> <Route path='/page1' component={Page1} /> <Route path='/page2' component={Page2} /> </Switch>`."
+  },
+  {
+    "question": "Explain how to create a simple React Hooks example program.",
+    "answer": "To create a simple React Hooks example program, you can use the `useState` hook to manage state and the `useEffect` hook to perform side effects. For example: `const [count, setCount] = useState(0); useEffect(() => { document.title = `Count: ${count}`; }, [count]); return (<div> <p>Count: {count}</p> <button onClick={() => setCount(count + 1)}>Increment</button> </div>);`."
+  },
+  {
+    "question": "Explain conditional rendering in React.",
+    "answer": "Conditional rendering in React allows you to render different UI elements based on certain conditions. You can use JavaScript's conditional operators like `if`, `else`, and the ternary operator `? :` to conditionally render components. For example: `{isLoggedIn ? <UserGreeting /> : <GuestGreeting />}`."
+  },
+  {
+    "question": "Can React Hook replaces Redux?",
+    "answer": "React Hooks can replace Redux for simple state management needs, but for complex applications with global state, Redux is still a powerful tool. Hooks like `useReducer` and `useContext` can handle local and shared state, but Redux provides a more structured and predictable way to manage global state."
+  },
+  {
+    "question": "What is React Router?",
+    "answer": "React Router is a library for routing in React applications. It allows you to define routes and navigate between different views or components based on the URL. React Router provides components like `BrowserRouter`, `Route`, `Switch`, and `Link` to handle routing."
+  },
+  {
+    "question": "Do Hooks cover all the functionalities provided by the classes?",
+    "answer": "Hooks cover most of the functionalities provided by classes, but there are some edge cases where classes might still be necessary. Hooks provide a more concise and flexible way to use state and side effects in functional components, but classes are still useful for certain patterns like error boundaries."
+  },
+  {
+    "question": "How does the performance of using Hooks will differ in comparison with the classes?",
+    "answer": "The performance of using Hooks can be similar or even better than classes because Hooks allow for more granular control over state and side effects. Hooks can help avoid unnecessary re-renders and optimize performance by using memoization and other techniques. However, the performance difference is often negligible for most applications."
+  },
+  {
+    "question": "Differentiate React Hooks vs Classes.",
+    "answer": "React Hooks provide a way to use state and side effects in functional components, while classes use methods like `setState` and lifecycle methods. Hooks are more concise and flexible, allowing for better code reuse and composition. Classes are more verbose and can be harder to understand and test."
+  },
+  {
+    "question": "Explain about types of Hooks in React.",
+    "answer": "React provides several built-in hooks, including `useState` for managing state, `useEffect` for side effects, `useContext` for consuming context, `useReducer` for complex state logic, `useCallback` for memoizing callbacks, `useMemo` for memoizing values, `useRef` for mutable references, `useLayoutEffect` for synchronous layout effects, and `useImperativeHandle` for customizing refs."
+  },
+  {
+    "question": "Does React Hook work with static typing?",
+    "answer": "Yes, React Hooks work with static typing. You can use TypeScript to add static types to your React components and hooks. TypeScript provides type definitions for React hooks, allowing you to catch type errors at compile time and improve code quality."
+  },
+  {
+    "question": "What are the lifecycle methods of React?",
+    "answer": "The lifecycle methods of React include `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`, `shouldComponentUpdate`, `getDerivedStateFromProps`, `getSnapshotBeforeUpdate`, and `componentDidCatch`. These methods allow you to perform actions at different stages of a component's lifecycle."
+  },
+  {
+    "question": "What are the different phases of the component lifecycle?",
+    "answer": "The different phases of the component lifecycle in React are Mounting (when the component is being inserted into the DOM), Updating (when the component is being re-rendered due to changes in props or state), and Unmounting (when the component is being removed from the DOM)."
+  },
+  {
+    "question": "What are Higher Order Components?",
+    "answer": "Higher Order Components (HOCs) are a pattern in React for reusing component logic. An HOC is a function that takes a component and returns a new component with additional props or behavior. HOCs are used to share common functionality between components."
+  },
+  {
+    "question": "How to pass data between react components?",
+    "answer": "Data can be passed between React components using props, context, or state management libraries like Redux. Props are used to pass data from parent to child components, context is used to pass data through the component tree without passing props down manually, and state management libraries are used for global state management."
+  },
+  {
+    "question": "Name a few techniques to optimize React app performance.",
+    "answer": "Techniques to optimize React app performance include using `React.memo` and `shouldComponentUpdate` to prevent unnecessary re-renders, using `useCallback` and `useMemo` to memoize functions and values, code splitting with `React.lazy` and `Suspense`, using `PureComponent` for class components, and minimizing the use of inline functions and JSX spread attributes."
+  },
+  {
+    "question": "What are the different ways to style a React component?",
+    "answer": "The different ways to style a React component include CSS stylesheets, CSS modules, styled-components, emotion, and inline styles. Each method has its own advantages and use cases, such as scoped styles with CSS modules and styled-components, or dynamic styles with inline styles."
+  },
+  {
+    "question": "How to prevent re-renders in React?",
+    "answer": "To prevent re-renders in React, you can use techniques like `React.memo` for functional components, `shouldComponentUpdate` for class components, and `useMemo` and `useCallback` hooks to memoize values and functions. Additionally, avoid using inline functions and JSX spread attributes, and use `PureComponent` for class components."
+  },
+  {
+    "question": "Explain Strict Mode in React.",
+    "answer": "Strict Mode is a tool in React for highlighting potential problems in an application. It activates additional checks and warnings for components, such as identifying components with unsafe lifecycle methods, warning about legacy context API, and detecting unexpected side effects. Strict Mode is enabled by wrapping a component tree with `<React.StrictMode>`."
+  }
+]
